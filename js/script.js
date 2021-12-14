@@ -4,35 +4,33 @@
 // Usiamo i nuovi metodi degli array foreach o filter.
 
 
-// function selection(array, num1, num2) {
-//     const array = 
-//     for (var i = num1; i <= num2; i++) {
-//         array.push(i);
-//     }
-//     return array
-// }
 
-
+        
 const arrayPrincipale = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const minNum = 3;
 const  maxNum = 8;
 console.log(arrayPrincipale);
-// const provaarray = selection(arrayPrincipale, minNum, maxNum);
-// console.log(provaarray);
 
-// for (let i = minNum; i < arrayPrincipale.length; i++) {
-//     const element = arrayPrincipale[i];
-//     console.log(element);
-    
-// }
 
-const nuovoArray = arrayPrincipale.filter ((element) => {
-    if(element <= minNum || element >= maxNum) {
-        return false;
+
+const arrayNew = between(arrayPrincipale, minNum, maxNum);
+console.log(arrayNew);
+
+
+
+
+
+// function
+
+function between(array, num1, num2) {
+    const nuovoArray = array.filter ((element) => {
+        if(element <= num1 || element >= num2) {
+            return false;
+            
+        }
+        return true;
         
-    }
-    return true;
-    
-});
+    });
 
-console.log(nuovoArray);
+    return nuovoArray;
+}
