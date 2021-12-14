@@ -24,7 +24,7 @@ console.log(arrayNew);
 
 function between(array, num1, num2) {
     const nuovoArray = array.filter ((element) => {
-        if(element <= num1 || element >= num2) {
+        if(element <= num1 || element >= num2) { 
             return false;
             
         }
@@ -34,3 +34,6 @@ function between(array, num1, num2) {
 
     return nuovoArray;
 }
+
+//nota
+//volendo inserire anche num1 e num2 nella selezione, si potrebbe semplicemente mettere "num1 -1" e "num +1" in questo modo si avrebbero compresi anche i numeri che fanno da inizio e fine.
