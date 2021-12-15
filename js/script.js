@@ -7,6 +7,19 @@
 
         
 const arrayPrincipale = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arrayTwo = 
+[
+    "pippo",
+    "pino",
+    "mario",
+    "elisabetta",
+    "thomas",
+    "chiara",
+    "paolo",
+    "marco",
+    "peppe",
+    "homer"
+]
 const minNum = 3;
 const  maxNum = 8;
 console.log(arrayPrincipale);
@@ -16,22 +29,25 @@ console.log(arrayPrincipale);
 const arrayNew = between(arrayPrincipale, minNum, maxNum);
 console.log(arrayNew);
 
-
+const arrayProva = between(arrayTwo, minNum, maxNum);
+console.log(arrayProva);
 
 
 
 // function
 
 function between(array, num1, num2) {
-    const nuovoArray = array.filter ((element) => {
-        if(element <= num1 || element >= num2) { 
+    const nuovoArray = array.filter ((element, index) => {
+        console.log(element);
+        console.log(index);
+       
+        if(index <= num1 || index >= num2) { 
             return false;
             
         }
         return true;
-        
     });
-
+    
     return nuovoArray;
 }
 
