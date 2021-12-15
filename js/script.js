@@ -22,14 +22,15 @@ const arrayTwo =
 ]
 const minNum = 3;
 const  maxNum = 8;
-console.log(arrayPrincipale);
 
 
 
 const arrayNew = between(arrayPrincipale, minNum, maxNum);
+console.log(arrayPrincipale);
 console.log(arrayNew);
 
 const arrayProva = between(arrayTwo, minNum, maxNum);
+console.log(arrayTwo);
 console.log(arrayProva);
 
 
@@ -38,8 +39,8 @@ console.log(arrayProva);
 
 function between(array, num1, num2) {
     const nuovoArray = array.filter ((element, index) => {
-        console.log(element);
-        console.log(index);
+        // console.log(element);
+        // console.log(index);
        
         if(index <= num1 || index >= num2) { 
             return false;
